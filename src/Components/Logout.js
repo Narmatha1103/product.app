@@ -47,14 +47,25 @@ const Logout = () => {
   return (
     <>
       <div>
-        <ul className="d-flex justify-content-evenly">
-          <li className="btn btn-danger" onClick={Handlelogout}>
-            Logout
-          </li>
-          <li>Email:{data.email}</li>
-          <li>Uid:{data.id}</li>
-          <li>User:{data.username}</li>
+        <h1>
+          <center>
+            <u>Profile</u>
+          </center>
+        </h1>
+        <br></br>
+        <ul>
+          <h1>
+            Welcome <i>"{data.username}</i>
+          </h1>
+          <br></br>
+          <li>Email : {data.email}</li>
+          <br></br>
+          <li>Id : {data.id}</li>
+          <br></br>
         </ul>
+        <button className="btn btn-danger" onClick={Handlelogout}>
+          Logout
+        </button>
       </div>
     </>
   );

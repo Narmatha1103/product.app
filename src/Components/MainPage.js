@@ -17,21 +17,22 @@ const MainPage = () => {
     console.log(email, username, password);
     createUserWithEmailAndPassword(auth, email, password)
       .then((success) => {
-        console.log("user creatted");
-        alert("User SignUp Successfully");
+        alert("Signup Successfully");
+
         set(ref(db, `users/${success.user.uid}`), {
           username: username,
           email: email,
           id: success.user.uid,
         });
-
         const user = success.user;
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
+        // ..
       });
   };
+
   const handleLogin = () => {
     console.log(email, password);
     signInWithEmailAndPassword(auth, email, password)
@@ -45,12 +46,7 @@ const MainPage = () => {
         navigate("/logout", {
           state: log,
         });
-        // navigate("/homesc",{
-        //   state:arr
-        // })
-        // ...
       })
-
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
@@ -58,7 +54,7 @@ const MainPage = () => {
   };
   return (
     <div className="text-center shadow-lg p-3 mb-5 bg-body rounded">
-      <h1>{isSignup ? "Singup" : "Login"}</h1>
+      <h1>{isSignup ? "Signup" : "Login"}</h1>
       <br />
 
       {isSignup && (
