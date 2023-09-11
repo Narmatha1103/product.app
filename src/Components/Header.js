@@ -6,6 +6,8 @@ import {
   Badge,
   Dropdown,
   Button,
+  NavLink,
+  NavbarBrand,
 } from "react-bootstrap";
 import { FaShoppingCart } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
@@ -26,11 +28,11 @@ const Header = () => {
       style={{ height: 80 }}
     >
       <Container>
-        <Navbar.Brand>
+        <NavbarBrand>
           <Link to="/" style={{ color: "white", textDecoration: "none" }}>
             Products Listing
           </Link>
-        </Navbar.Brand>
+        </NavbarBrand>
         <Navbar.Text className="search">
           <FormControl
             style={{ width: 500 }}
@@ -81,6 +83,11 @@ const Header = () => {
             </Dropdown.Menu>
           </Dropdown>
         </Nav>
+        <NavbarBrand>
+          <Link to="/signup" style={{ color: "white", textDecoration: "none" }}>
+            Sign Up
+          </Link>
+        </NavbarBrand>
       </Container>
     </Navbar>
   );

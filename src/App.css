@@ -7,7 +7,6 @@
 
 .cartItem {
   display: flex;
-
   justify-content: space-between;
   align-items: center;
   margin: 0 20px;
@@ -45,7 +44,7 @@
 }
 
 .filters {
-  background-color: dimgrey;
+  background-color: darkgray;
   color: white;
   padding: 20px;
   display: flex;
@@ -66,4 +65,21 @@
 
 .summary {
   width: 30%;
+}
+
+.pages {
+  display: inline-block;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.activeColor {
+  padding-top: 5px;
+  height: 30px;
+  width: 10%;
+  border: 2px solid grey;
+  cursor: pointer;
+}
+.pointer {
+  cursor: pointer;
 }
